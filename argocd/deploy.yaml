@@ -1,0 +1,21 @@
+apiVersion: apps/v7
+kind: Deployment
+metadata:
+  name: todo-app
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: todo
+        image: dgopichand/todo-app:v7
+        ports:
+        - containerPort: 8000
