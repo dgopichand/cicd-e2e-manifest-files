@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: todo
-        image: dgopichand/todo-app:v7
+        image: dgopichand/todo-app:v1
         ports:
         - containerPort: 8000
